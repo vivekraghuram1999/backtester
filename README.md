@@ -117,11 +117,29 @@ The tool will analyze how 10-year Treasury yields behaved in the 7 days before a
 
 ```
 backtester/
-├── app.py              # Main Dash application
+├── app.py              # Main Dash application (UI and callbacks)
+├── data_analysis.py    # Data parsing and analysis logic
 ├── backtester.ipynb    # Jupyter notebook for analysis
 ├── DGS10.csv          # Sample 10-year Treasury data
 └── README.md          # This file
 ```
+
+## Code Organization
+
+The project is organized into two main Python files:
+
+### `app.py` - Application Structure
+- Dash application initialization
+- UI layout and components (inputs, dropdowns, graphs)
+- Callback functions for user interactions
+- Table generation for displaying results
+
+### `data_analysis.py` - Data Processing
+- Data fetching from FRED API
+- Matrix calculations (yield changes, Sharpe ratios, hit rates)
+- Plot generation functions
+- Date preset generation
+- Statistical analysis utilities
 
 ## Contributing
 
